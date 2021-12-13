@@ -6,8 +6,11 @@ Support vector regression is a method that attempts to create support vectors th
 
 To create training data, we start with a high resolution (HR) image. This image is first downsampled using bicubic interpolation, then upsampled back to the original size, also using bicubic interpolation. In downsampling and upsampling, some fine details from the original HR image are lost, making the new image of the correct size, but blurry. To create training feature vectors for SVR, an m x m "patch" is slid over every pixel in the blurry image. The patches are vectorized, either row by row, or column by column. Each vectorized patch centered at the input image index (i,j) is the feature vector that corresponds to the single pixel value at index (i,j) in the original high resolution image. Thus, each output pixel value in the HR image corresponds to an m^2 size feature vector in the interpolated image. An SVR model is trained to predict a single pixel value for each patch given a collection of patches from an interpolated image. 
 
+The USC-SIPI Image Database [^1] was used to test the trained SVR model on varying images. 
+
 The project was completed using Google Colab, so it may be easiest to have the AT&T faces dataset in your Google Drive, and have your Drive mounted.
 
-If implementing this method in the .py file format, it may be best to either download the data to your desktop or use Kaggle to load in the dataset. 
 
 
+
+[^1] [online] at https://sipi.usc.edu/database/
