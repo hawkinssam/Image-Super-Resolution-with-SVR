@@ -13,4 +13,4 @@ The project was completed using Google Colab, so it may be easiest to have the A
 
 
 
-[^1] [online] at https://sipi.usc.edu/database/
+[^1]: [online] at https://sipi.usc.edu/database/
